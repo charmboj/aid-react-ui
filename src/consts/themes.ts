@@ -1,0 +1,22 @@
+export const color = {
+  BLACK: '#2d3436',
+  BLUE: '#0984e3',
+  CYAN: '#00cec9',
+  GRAY: '#636e72',
+  GREEN: '#00b894',
+  LIGHT_BLUE: '#74b9ff',
+  LIGHT_CYAN: '#81ecec',
+  LIGHT_GRAY: '#b2bec3',
+  LIGHT_GREEN: '#55efc4',
+  LIGHT_PINK: '#f65daf',
+  LIGHT_PURPLE: '#a29bfe',
+  LIGHT_RED: '#f44444',
+  LIGHT_SALMON: '#fab1a0',
+  LIGHT_YELLOW: '#ffeaa7',
+  PINK: '#e84393',
+  PURPLE: '#6c5ce7',
+  RED: '#d63031',
+  SALMON: '#ff7675',
+  WHITE: '#ffffff',
+  YELLOW: '#fdcb6e'
+}
