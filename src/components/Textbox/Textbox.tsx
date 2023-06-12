@@ -1,9 +1,9 @@
 import { Color, colors } from '../../consts/colors';
-import { Size, sizes } from '../../consts/sizes';
+import { Size } from '../../consts/sizes';
 import { classNames } from '../../utils/classNames';
-import './Button.css';
+import './Textbox.css';
 
-interface ButtonProps {
+interface TextboxProps {
 
   /**
    * Classname assigned to this component
@@ -21,45 +21,40 @@ interface ButtonProps {
   backgroundColor?: Color;
 
   /**
-   * Button size
+   * Textbox size
    */
   size?: Size;
 
   /**
    * Button contents
    */
-  label: string;
+  placeholder?: string;
 
   /**
    * Click handler
    */
-  onClick?: () => void;
+  onFocus?: () => void;
 }
 
 /**
- * Basic Button UI component
+ * Basic Textbox input UI component
  */
-export const Button = ({
+export const Textbox = ({
   className,
   size = 'medium',
-  backgroundColor = 'blue',
-  color = 'white',
-  label,
+  backgroundColor = 'white',
+  color = 'black',
   ...props
-}: ButtonProps) => {
-
+}: TextboxProps) => {
   return (
-    <button
+    <input
       className={classNames([
-        'aru-btn',
-        `aru-btn--${sizes.get(size)}`,
+        'aru-tbx',
         `bg-${colors.get(backgroundColor)?.className}`,
         `cl-${colors.get(color)?.className}`,
         className
       ])}
       {...props}
-    >
-      {label}
-    </button>
-  );
-};
+    />
+  )
+}

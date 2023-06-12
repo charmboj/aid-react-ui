@@ -1,6 +1,6 @@
-import "./App.css";
-import "./styles/themes.css";
-import { Button } from "./components/Button/Button";
+import './App.css';
+import './styles/themes.css';
+import { Button } from './components/Button/Button';
 
 const App = () => {
   return (
