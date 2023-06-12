@@ -8,17 +8,17 @@
   line-height: 1;
 }
 
-.aru-btn--sml {
+.aru-btn--sm {
   font-size: 12px;
   padding: 10px 16px;
 }
 
-.aru-btn--med {
+.aru-btn--md {
   font-size: 14px;
   padding: 11px 20px;
 }
 
-.aru-btn--lrg {
+.aru-btn--lg {
   font-size: 16px;
   padding: 12px 24px;
 }

@@ -1,56 +1,55 @@
-import { styleConst } from '../../consts/classConsts';
+import { Color, colors } from '../../consts/colors';
+import { Size, sizes } from '../../consts/sizes';
 import { classNames } from '../../utils/classNames';
 import './Button.css';
 
 interface ButtonProps {
+
   /**
-   * Use primary theme
+   * Text color
    */
-  primary?: boolean;
+  color?: Color;
+
   /**
-   * Text color in hex
+   * Background color
    */
-  color?: string;
-  /**
-   * Background color in hex
-   */
-  backgroundColor?: string;
+  backgroundColor?: Color;
+
   /**
    * Button size
    */
-  size?: 'sml' | 'med' | 'lrg';
+  size?: Size;
+
   /**
    * Button contents
    */
   label: string;
+
   /**
    * Click handler
    */
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: () => void;
 }
 
 /**
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
-  size = 'med',
-  backgroundColor,
-  color,
+  size = 'medium',
+  backgroundColor = 'blue',
+  color = 'white',
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 
-      `${styleConst.BG_BLUE} ${styleConst.CL_WHITE}` : 
-      `${styleConst.BG_LIGHT_GRAY} ${styleConst.CL_BLACK}`;
+
   return (
     <button
       className={classNames([
-        'aru-btn', `aru-btn--${size}`, mode
+        'aru-btn', `aru-btn--${sizes.get(size)}`
       ])}
       style={{ 
-        backgroundColor, 
-        color 
+        backgroundColor: colors.get(backgroundColor),
+        color: colors.get(color)
       }}
       {...props}
     >

@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="App">
       Aid React UI
-      <Button primary label="bruh" />
+      <Button label="bruh" />
     </div>
   )
 }
