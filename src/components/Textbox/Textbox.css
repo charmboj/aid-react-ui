@@ -1,5 +1,39 @@
-.aru-tbx {
-  padding: 10px;
-  border-radius: 5px;
+.aru-tbx--sm > .aru-tbx--label {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.aru-tbx--md > .aru-tbx--label {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.aru-tbx--lg > .aru-tbx--label {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.aru-tbx--input {
   border: 2px solid;
+}
+
+.aru-tbx--sm > .aru-tbx--input {
+  font-size: 12px;
+  padding: 10px 10px;
+  width: 180px;
+  border-radius: 5px;
+}
+
+.aru-tbx--md > .aru-tbx--input {
+  font-size: 13px;
+  padding: 10px 11px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.aru-tbx--lg > .aru-tbx--input {
+  font-size: 14px;
+  padding: 10px 12px;
+  width: 220px;
+  border-radius: 5px;
 }

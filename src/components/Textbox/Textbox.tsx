@@ -1,5 +1,5 @@
 import { Color, colors } from '../../consts/colors';
-import { Size } from '../../consts/sizes';
+import { Size, sizes } from '../../consts/sizes';
 import { classNames } from '../../utils/classNames';
 import './Textbox.css';
 
@@ -19,6 +19,11 @@ interface TextboxProps {
    * Background color
    */
   backgroundColor?: Color;
+
+  /**
+   * Label to indicate which field the user is trying to fill in
+   */
+  label: string;
 
   /**
    * Textbox size
@@ -41,20 +46,30 @@ interface TextboxProps {
  */
 export const Textbox = ({
   className,
+  label,
   size = 'medium',
   backgroundColor = 'white',
   color = 'black',
   ...props
 }: TextboxProps) => {
   return (
-    <input
+    <div
       className={classNames([
-        'aru-tbx',
-        `bg-${colors.get(backgroundColor)?.className}`,
-        `cl-${colors.get(color)?.className}`,
+        'aru-tbx', 
+        `aru-tbx--${sizes.get(size)}`,
         className
       ])}
-      {...props}
-    />
+    >
+      <div className='aru-tbx--label'>{label}</div>
+      <input
+        className={classNames([
+          'aru-tbx--input',
+          `bg-${colors.get(backgroundColor)?.className}`,
+          `cl-${colors.get(color)?.className}`
+        ])}
+        {...props}
+      />
+    </div>
+
   )
 }
