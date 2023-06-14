@@ -6,44 +6,44 @@ import './Textbox.css';
 interface TextboxProps {
 
   /**
-   * Classname assigned to this component
-   */
+  * Classname assigned to this component
+  */
   className?: string;
 
   /**
-   * Text color
-   */
+  * Text color
+  */
   color?: Color;
 
   /**
-   * Background color
-   */
+  * Background color
+  */
   backgroundColor?: Color;
 
   /**
-   * Label to indicate which field the user is trying to fill in
-   */
+  * Label to indicate which field the user is trying to fill in
+  */
   label: string;
 
   /**
-   * Textbox size
-   */
+  * Textbox size
+  */
   size?: Size;
 
   /**
-   * Button contents
-   */
+  * Button contents
+  */
   placeholder?: string;
 
   /**
-   * Click handler
-   */
+  * Click handler
+  */
   onFocus?: () => void;
 }
 
 /**
- * Basic Textbox input UI component
- */
+* Basic Textbox input UI component
+*/
 export const Textbox = ({
   className,
   label,
@@ -70,6 +70,5 @@ export const Textbox = ({
         {...props}
       />
     </div>
-
   )
 }

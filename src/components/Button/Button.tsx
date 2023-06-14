@@ -6,39 +6,39 @@ import './Button.css';
 interface ButtonProps {
 
   /**
-   * Classname assigned to this component
-   */
+  * Classname assigned to this component
+  */
   className?: string;
 
   /**
-   * Text color
-   */
+  * Text color
+  */
   color?: Color;
 
   /**
-   * Background color
-   */
+  * Background color
+  */
   backgroundColor?: Color;
 
   /**
-   * Button size
-   */
+  * Button size
+  */
   size?: Size;
 
   /**
-   * Button contents
-   */
+  * Button contents
+  */
   label: string;
 
   /**
-   * Click handler
-   */
+  * Click handler
+  */
   onClick?: () => void;
 }
 
 /**
- * Basic Button UI component
- */
+* Basic Button UI component
+*/
 export const Button = ({
   className,
   size = 'medium',
