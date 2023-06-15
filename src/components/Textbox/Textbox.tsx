@@ -36,6 +36,12 @@ interface TextboxProps {
   placeholder?: string;
 
   /**
+  * Textbox field type
+  */
+  type?: 'text' | 'password' | 'date';
+  
+
+  /**
   * Click handler
   */
   onFocus?: () => void;
